@@ -47,22 +47,27 @@ link {
 
 nav {
     background-color: #111;
-    width: auto;
+    width: max-content;
+    padding: 10px;
     margin-bottom: 20px;
 }
 
 nav a {
+    color: #818181;
+    size: 20px;
+}
+
+nav a:hover {
     color: #f1f1f1;
-    size: 15px;
 }
 
 embed {
     border: #111;
     border-radius: 10px;
+    align-self: center;
 }
 
 object {
-    align-items: center;
     border: #111;
     border-radius: 10px;
 }
