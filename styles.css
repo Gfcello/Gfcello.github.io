@@ -55,6 +55,7 @@ nav {
 nav a {
     color: #818181;
     size: 20px;
+    padding: 3px;
 }
 
 nav a:hover {
