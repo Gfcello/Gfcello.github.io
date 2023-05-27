@@ -47,10 +47,13 @@ link {
 
 nav {
     background-color: #111;
+    width: auto;
+    margin-bottom: 20px;
 }
 
 nav a {
     color: #f1f1f1;
+    size: 15px;
 }
 
 embed {
