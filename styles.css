@@ -15,7 +15,7 @@
     padding: 8px 8px 8px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
+    color: #c4c4c4;
     display: block;
   }
   
@@ -26,7 +26,7 @@
 
 header {
     background-color: rgb(150, 5, 190);
-    border: #7b7b7b;
+    border: #c4c4c4;
     border-width: 10px;
 }
 
