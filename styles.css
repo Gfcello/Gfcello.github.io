@@ -25,13 +25,13 @@
     color: #f1f1f1;
   }
 
-head {
+header {
     background-color: rgb(151, 7, 187);
     border: #7b7b7b;
     border-width: 10px;
 }
 
-title {
+h1 {
     text-align: center;
     color: #f1f1f1;
 }
@@ -47,5 +47,5 @@ link {
 
 embed {
     border: #111;
-    border-radius: 5px;
+    border-radius: 10px;
 }
