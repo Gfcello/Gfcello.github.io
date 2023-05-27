@@ -51,13 +51,14 @@ nav {
 }
 
 nav button {
-    color: rgb(150, 5, 190);
+    background-color: rgb(150, 5, 190);
+    color: #f1f1f1;
     size: 20px;
     padding: 3px;
 }
 
 nav button:hover {
-    color: rgb(180, 120, 190);
+    background-color: rgb(180, 120, 190);
 }
 
 embed {
