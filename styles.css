@@ -45,20 +45,19 @@ link {
 }
 
 nav {
-    background-color: rgb(150, 5, 190);
     width: max-content;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-nav a {
-    color: #c4c4c4;
+nav button {
+    color: rgb(150, 5, 190);
     size: 20px;
     padding: 3px;
 }
 
-nav a:hover {
-    color: #f1f1f1;
+nav button:hover {
+    color: rgb(180, 120, 190);
 }
 
 embed {
