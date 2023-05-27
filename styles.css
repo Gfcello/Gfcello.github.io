@@ -1,0 +1,9 @@
+body {
+    border: 5px outset rgb(72, 2, 119);
+    background-color: rgb(151, 7, 187);
+    text-align: left;
+}
+
+link {
+    display: none;
+  }
