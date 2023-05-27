@@ -68,9 +68,9 @@ embed {
 }
 
 .resume {
-    width: fit-content;
+    width: 60%;
     margin-left: 20%;
-    height: fit-content;
+    height: 1000px;
 }
 
 object {
