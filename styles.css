@@ -25,11 +25,27 @@
     color: #f1f1f1;
   }
 
-body {
+head {
     background-color: rgb(151, 7, 187);
+    border: #7b7b7b;
+    border-width: 10px;
+}
+
+title {
+    text-align: center;
+    color: #f1f1f1;
+}
+
+body {
+    background-color: rgb(206, 117, 228);
     text-align: left;
 }
 
 link {
     display: none;
+}
+
+embed {
+    border: #111;
+    border-radius: 5px;
 }
