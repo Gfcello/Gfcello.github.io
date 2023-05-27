@@ -48,11 +48,11 @@ nav {
     background-color: rgb(150, 5, 190);
     width: max-content;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 nav a {
-    color: #818181;
+    color: #c4c4c4;
     size: 20px;
     padding: 3px;
 }
