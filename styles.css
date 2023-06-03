@@ -1,39 +1,54 @@
-/* The sidebar menu */
-.sidenav {
-    height: fit-content; /* Full-height: remove this if you want "auto" height */
-    width: 120px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 25%; /* Stay at the top */
-    right: 0;
-    background-color: rgb(150, 5, 190); /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-  }
-  
-  /* The navigation menu links */
-  .sidenav button {
-    padding: 8px 8px 8px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    background-color: rgb(150, 5, 190);
-    color: #f1f1f1;
-    border: #f1f1f1;
-    width: 100%;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav button:hover {
-    background-color: rgb(180, 120, 190);
-  }
-
 .topnav {
-    background-color: rgb(150, 5, 190);
-    border: rgb(150, 5, 190);
-    border-width: 20px;
+    background-color: rgb(110, 0, 140);
     margin-top: -23px;
     margin-left: -8px;
     margin-right: -8px;
     margin-bottom: 10px;
+}
+
+nav {
+    width: max-content;
+    padding: 5px;
+}
+
+.topnav button {
+    background-color: rgb(110, 0, 140);
+    color: #f1f1f1;
+    border: #f1f1f1;
+    padding: 3px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+nav button:hover {
+    background-color: rgb(180, 120, 190);
+}
+
+.sidenav {
+    height: fit-content;
+    width: 120px;
+    position: fixed; 
+    z-index: 1; 
+    top: 25%;
+    right: 0;
+    background-color: rgb(110, 0, 140);
+    overflow-x: hidden;
+    border-radius: 10px;
+}
+
+.sidenav button {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: rgb(110, 0, 140);
+    color: #f1f1f1;
+    border: #f1f1f1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sidenav button:hover {
+    background-color: rgb(180, 120, 190);
 }
 
 
@@ -44,35 +59,50 @@ h1 {
     margin-bottom: 0px;
 }
 
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
 body {
     background-color: #f1f1f1;
     text-align: left;
+}
+
+.project {
+    width: 100%;
+    
+}
+
+.description {
+    display: flex;
+    margin-right: 120px;
+    background-color: rgb(238, 219, 255);
+}
+
+.description p {
+    width: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 link {
     display: none;
 }
 
-nav {
-    width: max-content;
-    padding: 5px;
-}
-
-nav button {
-    background-color: rgb(150, 5, 190);
-    color: #f1f1f1;
-    border: #f1f1f1;
-    padding: 3px;
-    font-size: 20px;
-}
-
-nav button:hover {
-    background-color: rgb(180, 120, 190);
-}
-
 embed {
-    border: rgb(150, 5, 190);
-    border-radius: 10px;
+    margin: 5px;
+}
+
+object {
+    margin: 5px;
+}
+
+video {
+    margin: 5px;
 }
 
 .resume {
@@ -81,7 +111,4 @@ embed {
     height: 1000px;
 }
 
-object {
-    border: rgb(150, 5, 190);
-    border-radius: 10px;
-}
+

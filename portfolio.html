@@ -15,7 +15,7 @@
 <body class="main">
     <div class="topnav">
         <h1>Gordon Fountain's Portfolio</h1>
-        
+
         <nav>
             <button onclick = "window.location.href='./index.html';">Home</button>
             <button onclick = "window.location.href='./portfolio.html';">Portfolio</button>
@@ -23,55 +23,108 @@
         </nav>
     </div>
     
-    
-
-    <div>
-        <h2>Welcome to my portfolio.</h2>
-    </div>
 
     <h3 id="Robotics">Robotics</h3>
 
-    <h4>Unicycle Balance Robot</h4>
-    <p>A robot designed to use gyroscopic balancing methods and to explore control algorithms.</p>
+    <div class="project">
+        <h4>Unicycle Balance Robot</h4>
 
-    <h4>Magnetic Wall Climbing Robot</h4>
-    <p>Worked in a group to create a free-spinning magnetic arm drive robot to climb vertical magnetic walls.</p>
+        <div class="description">
+            <p>Ongoing project working on a robot designed to use gyroscopic balancing methods and to explore control algorithms.</p>
+            <video width="240" height="427" controls>
+                <source src="resources/UnicycleBalance.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <embed type="image/jpg" src="resources/UnicycleModelIso.jpg" width="300" height="427">
+        </div>
+    </div>
+    
+    
+    <div class="project">
+        <h4>Magnetic Wall Climbing Robot</h4>
 
-    <h4>Hexapod Walker Robot</h4>
-    <p>Creating a 6 legged walking robot to develop an organic walking cycle with remote control commands.</p>
+        <div class="description">
+            <p>Worked in a group to create a free-spinning magnetic arm drive robot to climb vertical magnetic walls.</p>
+        </div>
+    </div>
 
-    <h4>CNC Maze Solver</h4>
-    <embed type="image/jpg" src="resources/CNCMazeSolver.jpg">
-    <p>For a first year project created a CNC machine and a maze mapping and solving algorithm.</p>
+    <div class="project">
+        <h4>Hexapod Walker Robot</h4>
+        <div class="description">
+            <p>Creating a 6 legged walking robot to develop an organic walking cycle with remote control commands.</p>
+        </div>
+    </div>
+    
 
+    <div class="project">
+        <h4>CNC Maze Solver</h4>
+        
+        <div class="description">
+            <p>For a first year project created a CNC machine and a maze mapping and solving algorithm.</p>
+            <embed type="image/jpg" src="resources/CNCMazeSolver.jpg">
+        </div>
+    </div>
+
+    <div class="project">
+        <h4>Laser Pointer Gimbal</h4>
+        <div class="description">
+            <p>A quick little project to entertain some cats with a wall-mounted laser pointer on a gimbal.</p>
+            <embed type="image/jpg" src="resources/LaserGimbalModel.jpg" width="320" height="200">
+            <embed type="image/jpg" src="resources/LaserGimbal.jpg" width="320" height="200">
+        </div>
+    </div>
+    
+    
 
     <h3 id="CAD">CAD</h3>
 
-    <h4>Robotic Arm Assemblies and End Effectors</h4>
-    <embed type="image/jpg" src="resources/2unify-arms.jpg" width="200" height="320">
-    <p>Working part-time during a class term I worked on improving the manufacturability and ease of assembly of robotic arms for 2Unify. I also worked on inventing end effector designs for use in educational settings. The effector designs were prototyped, iterated and are now in production for educators.</p>
+    <div class="project">
+        <h4>Robotic Arm Assemblies and End Effectors</h4>
+        <div class="description">
+            <p>Working part-time during a class term I worked on improving the manufacturability and ease of assembly of robotic arms for 2Unify. I also worked on inventing end effector designs for use in educational settings. The effector designs were prototyped, iterated and are now in production for educators.</p>
+            <embed type="image/jpg" src="resources/2unify-arms.jpg" width="200" height="320">
+        </div>
+    </div>
 
-    <h4>Simple Lever Wallet</h4>
-    <embed type="image/jpg" src="resources/WalletRender.JPG" width="320" height="200">
-    <video width="320" height="240" controls>
-        <source src="resources/MotionStudy.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <p>This is a wallet I made on a weekend because I needed a new wallet and wanted a slim design that showeed cards when opened.</p>
+    <div class="project">
+        <h4>Print-In-Place Adaptive Gripper</h4>
+        
+        <div class="description">
+            <p>Modeling and iterating ona a gripper design to adapt and form to the shape of an object beign grasped. Based of the design of Festo soft grippers. </p>
+            <embed type="image/jpg" src="resources/FestoGripper.jpg" width="350" height="300">
+        </div>
+    </div>
 
-    <h4>Laser Pointer Gimbal</h4>
-    <embed type="image/jpg" src="resources/LaserGimbalModel.jpg" width="320" height="200">
-    <embed type="image/jpg" src="resources/LaserGimbal.jpg" width="320" height="200">
-    <p>A quick little project to entertain some cats with a wall-mounted laser pointer on a gimbal.</p>
+    <div class="project">
+        <h4>Simple Lever Wallet</h4>
+        <div class="description">
+            <p>This is a wallet I made on a weekend because I needed a new wallet and wanted a slim design that presented the contained cards when opened.</p>
+            <embed type="image/jpg" src="resources/WalletRender.JPG" width="400" height="250">
+            <video width="320" height="240" controls>
+                <source src="resources/MotionStudy.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <embed type="image/jpg" src="resources/WalletReal.jpg" width="400" height="250">
+        </div>
+    </div>
 
     <h3 id="Software">Software & Controls</h3>
 
-    <h4>Payload Control RTOS System</h4>
-    <embed type="image/jpg" src="resources/SkugaugePCU.jpg" width="200" height="320">
-    <embed type="image/jpg" src="resources/SkygaugeContact.jpg" width="470" height="320">
-    <p>Created the codebase used for the payload control unit of an industrial inspection drone. The microcontroller and PCB interfaced with an array of Lidar distance sensors, a force-torque sensor, an ultrasonic thickness gauge, laser sights for pilot reference, a linear actuator for coupling fluid dispensing, and the flight control unit. The Lidar sensor interfacing uses a state machine to prevent sensor cross-talk.</p>
-
-    <h4>This website</h4>
-    <p>But I am not a web developer, and have no desire to be one. 😀</p>
+    <div class="project">
+        <h4>Payload Control RTOS System</h4>
+        <div class="description">
+            <p>Created the codebase used for the payload control unit of an industrial inspection drone. The microcontroller and PCB interfaced with an array of Lidar distance sensors, a force-torque sensor, an ultrasonic thickness gauge, laser sights for pilot reference, a linear actuator for coupling fluid dispensing, and the flight control unit. The Lidar sensor interfacing uses a state machine to prevent sensor cross-talk.</p>
+            <embed type="image/jpg" src="resources/SkugaugePCU.jpg" width="200" height="320">
+            <embed type="image/jpg" src="resources/SkygaugeContact.jpg" width="470" height="320">
+        </div>
+    </div>
+    
+    <div class="project">
+        <h4>This website</h4>
+        <div class="description">
+            <p>But I am not a web developer, and have no desire to be one. 😀</p>
+        </div>
+    </div>
+    
 </body>
 </html>
