@@ -11,28 +11,37 @@
   }
   
   /* The navigation menu links */
-  .sidenav a {
+  .sidenav button {
     padding: 8px 8px 8px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #c4c4c4;
-    display: block;
+    background-color: rgb(150, 5, 190);
+    color: #f1f1f1;
+    border: #f1f1f1;
+    width: 100%;
   }
   
   /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
+  .sidenav button:hover {
+    background-color: rgb(180, 120, 190);
   }
 
-header {
+.topnav {
     background-color: rgb(150, 5, 190);
-    border: #c4c4c4;
-    border-width: 10px;
+    border: rgb(150, 5, 190);
+    border-width: 20px;
+    margin-top: -23px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 10px;
 }
 
+
 h1 {
-    text-align: center;
+    text-align: left;
     color: #f1f1f1;
+    margin-left: 10px;
+    margin-bottom: 0px;
 }
 
 body {
@@ -53,8 +62,8 @@ nav button {
     background-color: rgb(150, 5, 190);
     color: #f1f1f1;
     border: #f1f1f1;
-    size: 20px;
     padding: 3px;
+    font-size: 20px;
 }
 
 nav button:hover {

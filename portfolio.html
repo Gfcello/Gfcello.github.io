@@ -5,24 +5,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<nav>
-    <button onclick = "window.location.href='./index.html';">Home</button>
-    <button onclick = "window.location.href='./portfolio.html';">Portfolio</button>
-    <button onclick = "window.location.href='./resume.html';">Resume</button>
-</nav>
-
-<header>
-    <h1>Gordon Fountain's Portfolio</h1>
-</header>
-
 <div class="sidenav">
-    <a href="#top">Top</a>
-    <a href="#Robotics">Robotics</a>
-    <a href="#CAD">CAD</a>
-    <a href="#Software">Software & Controls</a>
+    <button onclick = "window.location.href='#top';">Top</button>
+    <button onclick = "window.location.href='#Robotics';">Robotics</button>
+    <button onclick = "window.location.href='#CAD';">CAD</button>
+    <button onclick = "window.location.href='#Software';">Software & Controls</button>
   </div>
 
 <body class="main">
+    <div class="topnav">
+        <h1>Gordon Fountain's Portfolio</h1>
+        
+        <nav>
+            <button onclick = "window.location.href='./index.html';">Home</button>
+            <button onclick = "window.location.href='./portfolio.html';">Portfolio</button>
+            <button onclick = "window.location.href='./resume.html';">Resume</button>
+        </nav>
+    </div>
+    
+    
+
     <div>
         <h2>Welcome to my portfolio.</h2>
     </div>
@@ -66,7 +68,7 @@
 
     <h4>Payload Control RTOS System</h4>
     <embed type="image/jpg" src="resources/SkugaugePCU.jpg" width="200" height="320">
-    <embed type="image/jpg" src="resources/SkygaugeContact.jpg" width="320" height="200">
+    <embed type="image/jpg" src="resources/SkygaugeContact.jpg" width="470" height="320">
     <p>Created the codebase used for the payload control unit of an industrial inspection drone. The microcontroller and PCB interfaced with an array of Lidar distance sensors, a force-torque sensor, an ultrasonic thickness gauge, laser sights for pilot reference, a linear actuator for coupling fluid dispensing, and the flight control unit. The Lidar sensor interfacing uses a state machine to prevent sensor cross-talk.</p>
 
     <h4>This website</h4>
