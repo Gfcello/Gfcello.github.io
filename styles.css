@@ -68,7 +68,7 @@ h3 {
 }
 
 body {
-    background-color: #f1f1f1;
+    background-color: rgb(238, 219, 255);
     text-align: left;
 }
 
@@ -80,7 +80,7 @@ body {
 .description {
     display: flex;
     margin-right: 8%;
-    background-color: rgb(238, 219, 255);
+    background-color: #f1f1f1;
 }
 
 .description p {
