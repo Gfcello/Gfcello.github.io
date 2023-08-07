@@ -1,9 +1,68 @@
-.topnav {
-    background-color: rgb(110, 0, 140);
-    margin-top: -23px;
-    margin-left: -8px;
-    margin-right: -8px;
-    margin-bottom: 10px;
+:root {
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --dark-grey: rgb(60, 60, 60);
+    --light-purple: rgb(207, 160, 215);
+    --dark-purple: rgb(110, 0, 140);
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: var(--black);
+  }
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: var(--light-purple);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: var(--light-purple);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--dark-grey);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--black);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--light-purple);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--dark-grey);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 nav {
@@ -11,17 +70,8 @@ nav {
     padding: 5px;
 }
 
-.topnav button {
-    background-color: rgb(110, 0, 140);
-    color: #f1f1f1;
-    border: #f1f1f1;
-    padding: 3px;
-    font-size: 20px;
-    border-radius: 10px;
-}
-
 nav button:hover {
-    background-color: rgb(180, 120, 190);
+    background-color: var(--dark-grey);
 }
 
 .sidenav {
@@ -31,32 +81,32 @@ nav button:hover {
     z-index: 1; 
     top: 25%;
     right: 0;
-    background-color: rgb(110, 0, 140);
+    background-color: var(--dark-purple);
     overflow-x: hidden;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .sidenav button {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 20px;
-    background-color: rgb(110, 0, 140);
-    color: #f1f1f1;
-    border: #f1f1f1;
+    background-color: var(--black);
+    color: var(--light-purple);
+    border: var(--black);
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .sidenav button:hover {
-    background-color: rgb(180, 120, 190);
+    background-color: var(--dark-grey);
 }
 
-
 h1 {
-    text-align: left;
-    color: #f1f1f1;
-    margin-left: 10px;
+    background-color: var(--black);
+    text-align: center;
+    color: var(--light-purple);
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 h2 {
@@ -68,7 +118,7 @@ h3 {
 }
 
 body {
-    background-color: rgb(238, 219, 255);
+    background-color: var(--white);
     text-align: left;
 }
 
@@ -80,7 +130,7 @@ body {
 .description {
     display: flex;
     margin-right: 8%;
-    background-color: #f1f1f1;
+    background-color: var(--white);
 }
 
 .description p {

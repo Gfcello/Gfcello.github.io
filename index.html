@@ -6,14 +6,23 @@
 </head>
 
 <body>
-    <div class="topnav">
+    <div>
         <h1>Gordon Fountain's Homepage</h1>
+    </div>
 
-        <nav>
-            <button onclick = "window.location.href='./index.html';">Home</button>
-            <button onclick = "window.location.href='./portfolio.html';">Portfolio</button>
-            <button onclick = "window.location.href='./resume.html';">Resume</button>
-        </nav>
+    <div class="navbar">
+        <a href='./index.html'>Home</a>
+        <a href='./resume.html'>Resume</a>
+        <div class="dropdown">
+            <button class="dropbtn">Portfolio
+                    <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                    <a href="./portfolio.html#Robotics">Robotics</a>
+                    <a href="./portfolio.html#CAD">CAD</a>
+                    <a href="./portfolio.html#Software">Software</a>
+            </div>
+        </div> 
     </div>
 
     <h2>Welcome to my home ... page.</h2>
