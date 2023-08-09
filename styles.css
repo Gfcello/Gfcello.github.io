@@ -133,7 +133,17 @@ body {
     text-align: left;
     outline: none;
     font-size: 15px;
-  }
+}
+
+.project_title.collapsed:after {
+    content: " ▾";
+}
+.project_title:not(.collapsed):after {
+    content: " ▴";
+}
+.project_title:not(.collapsed)+div {
+   display:none;
+}
 
 .project {
     width: 100%;

@@ -12,3 +12,10 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+const menus = document.querySelectorAll('[data-toggle="collapse"]')
+for (const menu of menus) {
+  menu.addEventListener('click', function(event) {
+    this.classList.toggle('collapsed');
+  })
+}
