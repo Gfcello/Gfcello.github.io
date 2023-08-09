@@ -136,10 +136,10 @@ body {
 }
 
 .project_title.collapsed:after {
-    content: " ▾";
+    content: " ▴";
 }
 .project_title:not(.collapsed):after {
-    content: " ▴";
+    content: " ▾";
 }
 .project_title:not(.collapsed)+div {
    display:none;
