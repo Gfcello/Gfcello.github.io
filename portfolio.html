@@ -7,14 +7,14 @@
 
 <div class="sidenav">
     <button onclick = "window.location.href='#top';">Top</button>
-    <button onclick = "window.location.href='#Robotics';">Robotics</button>
-    <button onclick = "window.location.href='#CAD';">CAD</button>
-    <button onclick = "window.location.href='#Software';">Software & Controls</button>
+    <button onclick = "window.location.href='#Robotics';">Full Robots</button>
+    <button onclick = "window.location.href='#CAD';">Mechanical Projects</button>
+    <button onclick = "window.location.href='#Software';">Software & Controls Projects</button>
 </div>
 
 <body class="main">
     <div>
-        <h1>Gordon Fountain's Portfolio</h1>
+        <h1>Portfolio</h1>
     </div>
 
     <div class="navbar">
@@ -25,25 +25,27 @@
                     <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                    <a href="./portfolio.html#Robotics">Robotics</a>
-                    <a href="./portfolio.html#CAD">CAD</a>
-                    <a href="./portfolio.html#Software">Software</a>
+                    <a href="./portfolio.html#Robotics">Full Robots</a>
+                    <a href="./portfolio.html#CAD">Mechanical Projects</a>
+                    <a href="./portfolio.html#Software">Software & Controls Projects</a>
             </div>
         </div> 
     </div>
 
-    <h3 id="Robotics">Robotics</h3>
+    <h3 id="Robotics">Full Robots</h3>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Unicycle Balance Robot</button>
 
-        <div class="description">
-            <p>Ongoing project working on a robot designed to use gyroscopic balancing methods and to explore control algorithms.</p>
-            <video width="180" height="300" controls>
-                <source src="resources/UnicycleBalance.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <embed type="image/jpg" src="resources/UnicycleModelIso.jpg" width="200" height="300">
+        <div class="description-area">
+            <div class="description">
+                <p>A project working on a robot designed to use gyroscopic balancing methods and to explore control algorithms. The video shows running it to tune a controller that is underdamped. This project is succeeded by the Flywheel Robot project.</p>
+                <video controls muted>
+                    <source src="resources/UnicycleBalance.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <embed type="image/jpg" src="resources/UnicycleModelIso.jpg">
+            </div>
         </div>
     </div>
     
@@ -51,111 +53,158 @@
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Magnetic Wall Climbing Robot</button>
 
-        <div class="description">
-            <p>Worked in a group to create a free-spinning magnetic arm drive robot to climb vertical magnetic walls.</p>
+        <div class="description-area">
+            <div class="description">
+                <p>Worked in a group to create a free-spinning magnetic arm robot to mount, climb, and dismount vertical magnetic walls. Here are a few versions and a slow motion video of it descending a vertical wall.</p>
+                <embed type="image/png" src="resources/WallBotV1.png">
+                <embed type="image/png" src="resources/WallBotV2.png">
+                <video controls muted>
+                    <source src="resources/WallBotDescent.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </div>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Hexapod Walker Robot</button>
 
-        <div class="description">
-            <p>Creating a 6 legged walking robot to develop an organic walking cycle with remote control commands.</p>
+        <div class="description-area">
+            <div class="description">
+                <p>In the early stages of creating a 6 legged walking robot to develop an organic walking cycle with remote control commands.</p>
+                <embed type="image/png" src="resources/LarryV2.png">
+                <embed type="image/png" src="resources/LarryV3.png">
+            </div>
         </div>
     </div>
 
-    <div class="project">
+    <!-- <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">CNC Maze Solver</button>
         
-        <div class="description">
-            <p>For a first year project created a CNC machine and a maze mapping and solving algorithm.</p>
-            <embed type="image/jpg" src="resources/CNCMazeSolver.jpg">
+        <div class="description-area">
+            <div class="description">
+                <p>For a first year project created a CNC machine and a maze mapping and solving algorithm.</p>
+                <embed type="image/jpg" src="resources/CNCMazeSolver.jpg">
+            </div>
         </div>
-    </div>
+    </div> -->
+
+
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Laser Pointer Gimbal</button>
 
-        <div class="description">
-            <p>A quick little project to entertain some cats with a wall-mounted laser pointer on a gimbal.</p>
-            <embed type="image/jpg" src="resources/LaserGimbalModel.jpg" width="320" height="200">
-            <embed type="image/jpg" src="resources/LaserGimbal.jpg" width="320" height="200">
+        <div class="description-area">
+            <div class="description">
+                <p>A quick little project to entertain some cats with a wall-mounted laser pointer on a gimbal.</p>
+                <embed type="image/jpg" src="resources/LaserGimbalModel.jpg">
+                <embed type="image/jpg" src="resources/LaserGimbal.jpg">
+            </div>
         </div>
     </div>
     
 
-    <h3 id="CAD">CAD</h3>
+    <h3 id="CAD">Mechanical Projects</h3>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Robotic Arm Assemblies and End Effectors</button>
 
-        <div class="description">
-            <p>Worked part-time during a class term to improve the manufacturability and ease of assembly of robotic arms for the startup 2Unify. Worked on inventing end effector designs for use in educational settings. The effector designs were prototyped, iterated and are now in production for educators.</p>
-            <embed type="image/jpg" src="resources/2unify-arms.jpg" width="200" height="320">
+        <div class="description-area">
+            <div class="description"></div>
+                <p>Worked part-time during a class term to improve the manufacturability and ease of assembly of robotic arms for the startup 2Unify. Worked on inventing end effector designs for use in educational settings. The effector designs were prototyped, iterated and are now in production for educators.</p>
+                <embed type="image/jpg" src="resources/2unify-arms.jpg">
+            </div>
         </div>
     </div>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Flexible Thin-wall Motorized Gripper</button>
 
-        <div class="description">
-            <p>Studying thin-wall flexible PLA prints for Festo-style gripper assembly.</p>
-            <video width="320" height="240" controls>
-                <source src="resources/FestoGripperMotion.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="description-area">
+            <div class="description">
+                <p>Created a gripper for studying thin-wall flexible PLA prints for Festo-style gripper assembly. A stronger motor was needed to flex the grippers and the thin wall prints had low durability, so this style of gripper in thin PLA was deemed not feasible.</p>
+                <video controls muted>
+                    <source src="resources/FestoGripperMotion.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <embed type="image/png" src="resources/GripperExploded.png">
+                <embed type="image/png" src="resources/GripperAssembled.png">
+            </div>
         </div>
     </div>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Print-In-Place Adaptive Gripper</button>
         
-        <div class="description">
-            <p>Modeling and iterating ona a gripper design to adapt and form to the shape of an object being grasped. Based of the design of Festo soft grippers. </p>
-            <embed type="image/jpg" src="resources/PIPFestoGripper.jpg" width="350" height="300">
-            <embed type="image/jpg" src="resources/PIPFestoReal.jpg" width="300" height="300">
+        <div class="description-area">
+            <div class="description">
+                <p>Modeling and iterating ona a gripper design to adapt and form to the shape of an object being grasped. Based of the design of Festo soft grippers. </p>
+                <embed type="image/jpg" src="resources/PIPFestoGripper.jpg">
+                <embed type="image/jpg" src="resources/PIPFestoReal.jpg">
+            </div>
         </div>
     </div>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Simple Lever Wallet</button>
 
-        <div class="description">
-            <p>This is a wallet I made on a weekend because I needed a new wallet and wanted a slim design that presented the contained cards when opened.</p>
-            <embed type="image/jpg" src="resources/WalletRender.JPG" width="400" height="250">
-            <video width="320" height="240" controls>
-                <source src="resources/MotionStudy.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <embed type="image/jpg" src="resources/WalletReal.jpg" width="400" height="250">
+        <div class="description-area">
+            <div class="description">
+                <p>This is a wallet I made on a weekend because I needed a new wallet and wanted a slim design that presented the contained cards when opened.</p>
+                <embed type="image/jpg" src="resources/WalletRender.JPG">
+                <video controls muted>
+                    <source src="resources/MotionStudy.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <embed type="image/jpg" src="resources/WalletReal.jpg">
+            </div>
         </div>
     </div>
 
-    <h3 id="Software">Software & Controls</h3>
+    <div class="project">
+        <button type="button" data-toggle="collapse" class="project_title">Miscellaneous Designs and 3D Prints</button>
+
+        <div class="description-area">
+            <div class="description">
+                <p>A fun double helix conical tree ornament that ended up looking better upside down.</p>
+                <embed type="image/jpg" src="resources/OrnamentModel.png">
+                <embed type="image/jpg" src="resources/OrnamentOnPrintBed.png">
+                <embed type="image/jpg" src="resources/OrnamentOnTree.png">
+            </div>
+        </div>
+    </div>
+
+    <h3 id="Software">Software & Controls Projects</h3>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Payload Control RTOS System</button>
 
-        <div class="description">
-            <p>Created the codebase used for the payload control unit of an industrial inspection drone. The microcontroller and PCB interfaced with an array of Lidar distance sensors, a force-torque sensor, an ultrasonic thickness gauge, laser sights for pilot reference, a linear actuator for coupling fluid dispensing, and the flight control unit. The Lidar sensor interfacing uses a state machine to prevent sensor cross-talk.</p>
-            <embed type="image/jpg" src="resources/SkugaugePCU.jpg" width="200" height="320">
-            <embed type="image/jpg" src="resources/SkygaugeContact.jpg" width="470" height="320">
+        <div class="description-area">
+            <div class="description">
+                <p>Created the codebase used for the payload control unit of an industrial inspection drone. The microcontroller and PCB interfaced with an array of Lidar distance sensors, a force-torque sensor, an ultrasonic thickness gauge, laser sights for pilot reference, a linear actuator for coupling fluid dispensing, and the flight control unit. The Lidar sensor interfacing uses a state machine to prevent sensor cross-talk.</p>
+                <embed type="image/jpg" src="resources/SkugaugePCU.jpg">
+                <embed type="image/jpg" src="resources/SkygaugeContact.jpg">
+            </div>
         </div>
     </div>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Working Carcassone Desktop App</button>
 
-        <div class="description">
-            <p>Created a working interface and logic for the game Carcassone using python and tkinter.</p>
+        <div class="description-area">
+            <div class="description">
+                <p>Created a working interface and logic for the game Carcassone using python and tkinter.</p>
+            </div>
         </div>
     </div>
     
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">This website</button>
 
-        <div class="description">
-            <p>But I am not a web developer, and have no desire to be one. 😀</p>
+        <div class="description-area">
+            <div class="description">
+                <p>But I am not a web developer, and have no desire to be one. 😀</p>
+            </div>
         </div>
     </div>
     
