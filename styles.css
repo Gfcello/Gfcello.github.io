@@ -7,6 +7,23 @@
     --dark-purple: rgb(110, 0, 140);
 }
 
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    background-color: var(--dark-grey);
+    text-align: left;
+    color: var(--white);
+}
+
+
+.page_title {
+    height: fit-content;
+}
+
+.banner {
+    background-color: var(--dark-purple);
+    height: 10px;
+}
+
 .navbar {
     overflow: hidden;
     background-color: var(--black);
@@ -103,9 +120,9 @@ a {
 .sidenav button {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     background-color: var(--black);
-    color: var(--light-purple);
+    color: var(--white);
     border: var(--black);
     width: 100%;
     border-radius: 0px;
@@ -119,7 +136,7 @@ h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     background-color: var(--black);
     text-align: center;
-    color: var(--light-purple);
+    color: var(--white);
     margin-bottom: 0px;
     margin-top: 0px;
     padding: 20px
@@ -128,24 +145,28 @@ h1 {
 h2 {
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 30px;
-    color: var(--light-purple);
+    color: var(--white);
 }
 
 h3 {
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 30px;
-    color: var(--light-purple);
-}
-
-body {
-    font-family: Verdana, Tahoma, sans-serif;
-    background-color: var(--dark-grey);
-    text-align: left;
     color: var(--white);
 }
 
 p {
     font-family: Verdana, Tahoma, sans-serif;
+}
+
+.clicker {
+    background-color: var(--dark-purple);
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--white);
+    border: var(--black);
+    width: auto;
+    border-radius: 0px;
 }
 
 .project_title {
@@ -172,12 +193,15 @@ p {
 
 .project {
     width: 100%;
+    border-width: 3px;
+    border-color: var(--dark-purple);
+    border-style: solid;
+    background-color: var(--dark-grey);
 }
 
 .description-area {
     margin: auto;
     margin-right: 8%;
-    display: none;
     overflow: hidden;
     padding: 10px;
 }
@@ -222,8 +246,6 @@ link {
 object {
     margin: 5px;
 }
-
-
 
 .resume {
     width: 60%;

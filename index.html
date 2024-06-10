@@ -3,12 +3,29 @@
 <head>
     <title>Gordon Fountain's Home</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function clickCounter() {
+          if (typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+              localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+              localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "You've clicked this button " + localStorage.clickcount + " time(s).";
+          } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+          }
+        }
+    </script>
 </head>
 
 <body>
     <div>
         <h1>Homepage</h1>
     </div>
+
+    <div class="banner"></div>
 
     <div class="navbar">
         <a href='./index.html'>Home</a>
@@ -27,6 +44,9 @@
 
     <h2>Welcome to my homepage.</h2>
     <p>Hi, I'm Gordon Fountain and this site is a mix of portfolio and a place to play around with making a website.</p>
+    <p>For example, here's a button that remembers how many times it has been clicked by you:</p>
+    <p><button onclick="clickCounter()" type="button" class="clicker">For clicking use only.</button></p>
+    <div id="result"></div>
 </body>
 
 </html>
