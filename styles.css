@@ -27,6 +27,9 @@ body {
 .navbar {
     overflow: hidden;
     background-color: var(--black);
+    border-width: 3px;
+    border-color: var(--dark-purple);
+    border-style: solid;
   }
 
 .navbar a {
@@ -139,7 +142,10 @@ h1 {
     color: var(--white);
     margin-bottom: 0px;
     margin-top: 0px;
-    padding: 20px
+    padding: 20px;
+    border-width: 3px;
+    border-color: var(--dark-purple);
+    border-style: solid;
 }
 
 h2 {
