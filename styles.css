@@ -14,7 +14,6 @@ body {
     color: var(--white);
 }
 
-
 .page_title {
     height: fit-content;
 }
@@ -114,10 +113,13 @@ a {
     position: fixed; 
     z-index: 1; 
     top: 25.1%;
-    right: 8px;
+    right: 3px;
     background-color: var(--black);
     overflow-x: hidden;
     border-radius: 0px;
+    border-width: 3px;
+    border-color: var(--dark-purple);
+    border-style: solid;
 }
 
 .sidenav button {
