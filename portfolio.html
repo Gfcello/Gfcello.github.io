@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gordon Fountain's Portfolio</title>
+    <title>Gordon Fountain | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-85YJVF4226');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A University of Waterloo Mechatronics Engineering Alumni passionate about developing mobile robots.">
 </head>
 
 <div class="sidenav">
@@ -33,6 +47,192 @@
             </div>
         </div> 
     </div>
+
+    <header class="filter_header">
+        <div class="filters">
+            <ul>
+                <li>
+                    <a data-filter=".all" href="#">All</a>
+                </li>
+                <li>
+                    <a data-filter=".mech" href="#">Mechanical</a>
+                </li>
+                <li>
+                    <a data-filter=".firmware" href="#">Software and Controls</a>
+                </li>
+                <li>
+                    <a data-filter=".electrical" href="#">Electrical</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="cards_container">
+        <!-- CARD -1-->
+        <figure style="cursor: pointer;" class="card mech hardware software all">
+            <a class="portfolio-link">
+                <img src="./resources/SnakeWideShotV1.png" width=100% height=auto>
+                <figcaption>
+                    <h3>Snake Robot</h3>
+                </figcaption>
+                <!--Modal-->
+                <div class="portfolio-modal">
+                    <button type="button" class="modal-close">
+                        <img class="close-svg" src="./resources/close button.svg" alt="Close">
+                    </button>
+                    <div class="portfolio-header">
+                        <div class="portfolio-title-box">
+                            <h2 class="portfolio-title">Snake Robot</h2>
+                            <p class="portfolio-subtitle">A snake robot for kinematics, controls, and organic motion study</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <br>
+                        <div class="image-box">
+                            <img class="portfolio-full-width" src="./resources/SnakeGears.png">
+                        </div>
+                        <div class="text-box">
+                            <p>My second term of junior year had what was probably my favorite course thus far, MTE 380. Why is that? Because of how open ended and challenging it was. I’ve written about this before on my blog - but I think courses should strive to be more like this one. The rundown of the syllabus was teams of 3 - 6 will compete to complete a robotics challenge that will be announced in the second week. Your mark of the course is highly dependent on your competition score, which is calculated as:</p>
+                        </div>
+                        <div class="image-box">
+                            <img class="center-picture twenty-five-per" src="./assets/TB_perf_score.png">
+                        </div>
+                        <div class="text-box">
+                            <b>The Challenge</b>
+                        </div>
+                        <div class="text-box">
+                            <p>Essentially the field is two 8ft x 8ft areas separated by a 3ft tall wall. The goal is to start on one side, and navigate towards a red pole on the other side of the field, requiring some method of crossing the wall. Part of the wall is made out of steel sheet metal, encouraging some sort of magnetic solution. Another part of the wall has a ramp up and down. It's worth noting that controlled flight is not allowed, and that you are allowed to leave behind parts as you go.</p>
+                        </div>
+                        <div class="image-box">
+                            <img class="center-picture sixty-per" src="./assets/TB_field_dimensioned.png">
+                        </div>
+                        <div class="text-box">
+                            <p>
+                                Off the bat, our team noticed that it’s obvious that the priority of optimization should be:<br>
+                                1. Reduce time to complete<br>
+                                2. Reduce mass<br>And that there is a tradeoff in score you can calculate between the two, since they are related by square law. For example, if some upgrade doubles the mass, but saves ⅓ of the time to complete the course this is justified because:
+                            </p>
+                        </div>
+                        <div class="image-box">
+                            <img class="center-picture forty-per" src="./assets/TB_tradeoff.png">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -2-->
+        <figure style="cursor: pointer;" class="card mech hardware software all">
+            <a class="portfolio-link">
+                <img src="./assets/TB_cover_320p.png" width=100% height=auto>
+                <figcaption>
+                    <h3>Throw Bot</h3>
+                </figcaption>
+                <!--Modal-->
+                <div class="portfolio-modal">
+                    <button type="button" class="modal-close">
+                        <img class="close-svg" src="./assets/close button.svg" alt="Close">
+                    </button>
+                    <div class="portfolio-header">
+                        <div class="portfolio-title-box">
+                            <h2 class="portfolio-title">Throw Bot</h2>
+                            <p class="portfolio-subtitle">A hyper optimized robot built to win</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <br>
+                        <div class="image-box">
+                            <img class="portfolio-full-width" src="./assets/TB_side_render.png">
+                        </div>
+                        <div class="text-box">
+                            <p>My second term of junior year had what was probably my favorite course thus far, MTE 380. Why is that? Because of how open ended and challenging it was. I’ve written about this before on my blog - but I think courses should strive to be more like this one. The rundown of the syllabus was teams of 3 - 6 will compete to complete a robotics challenge that will be announced in the second week. Your mark of the course is highly dependent on your competition score, which is calculated as:</p>
+                        </div>
+                        <div class="image-box">
+                            <img class="center-picture twenty-five-per" src="./assets/TB_perf_score.png">
+                        </div>
+                        <div class="text-box">
+                            <b>The Challenge</b>
+                        </div>
+                        <div class="text-box">
+                            <p>Essentially the field is two 8ft x 8ft areas separated by a 3ft tall wall. The goal is to start on one side, and navigate towards a red pole on the other side of the field, requiring some method of crossing the wall. Part of the wall is made out of steel sheet metal, encouraging some sort of magnetic solution. Another part of the wall has a ramp up and down. It's worth noting that controlled flight is not allowed, and that you are allowed to leave behind parts as you go.</p>
+                        </div>
+                        <div class="image-box">
+                            <img class="center-picture sixty-per" src="./assets/TB_field_dimensioned.png">
+                        </div>
+                        <div class="text-box">
+                            <p>
+                                Off the bat, our team noticed that it’s obvious that the priority of optimization should be:<br>
+                                1. Reduce time to complete<br>
+                                2. Reduce mass<br>And that there is a tradeoff in score you can calculate between the two, since they are related by square law. For example, if some upgrade doubles the mass, but saves ⅓ of the time to complete the course this is justified because:
+                            </p>
+                        </div>
+                        <div class="image-box">
+                            <img class="center-picture forty-per" src="./assets/TB_tradeoff.png">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </figure>
+        
+        <figure style="cursor: pointer;" class="card firmware all">
+            <a class="portfolio-link" href="../index">
+                <img src="./resources/Website.png" width=100% height=auto>
+                <figcaption>
+                    <h3>This Website</h3>
+                </figcaption>
+            </a>
+        </figure>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $(".cards_container").isotope({
+            itemSelector: '.card',
+            layoutMode: 'fitRows'
+        });
+
+        $(".filters ul li a").click(function() {
+            $(".filters ul li a").removeClass("active");
+            $(this).addClass("active");
+
+            var selector = $(this).attr("data-filter")
+
+            $(".cards_container").isotope({
+                filter: selector
+            });
+            return false
+        });
+    </script>
+    <script src="./portfolio_filtering.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <h3 id="Robotics">Full Robots</h3>
 

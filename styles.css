@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: monospace;
     background-color: var(--dark-grey);
     text-align: left;
     color: var(--white);
@@ -105,6 +105,8 @@ button {
 
 a {
     font-weight: bold;
+    font: monospace;
+    color: var(--light-purple);
 }
 
 .sidenav {
@@ -138,7 +140,7 @@ a {
 }
 
 h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background-color: var(--black);
     text-align: center;
     color: var(--white);
@@ -151,22 +153,26 @@ h1 {
 }
 
 h2 {
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     color: var(--white);
 }
 
 h3 {
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     color: var(--white);
 }
 
 p {
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: monospace;
 }
 
-.clicker {
+.frontpage-text{
+    font-size: 20px;
+}
+
+/* .clicker {
     background-color: var(--dark-purple);
     padding: 8px 8px 8px 8px;
     text-decoration: none;
@@ -175,7 +181,7 @@ p {
     border: var(--black);
     width: auto;
     border-radius: 0px;
-}
+} */
 
 .project_title {
     background-color: var(--black);
@@ -249,6 +255,7 @@ p {
 
 link {
     display: none;
+    font: monospace;
 }
 
 object {
@@ -261,4 +268,188 @@ object {
     height: 1200px;
 }
 
+/* Portfolio filtering */
+.filter_header {
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+}
 
+.filters {
+    width: 84vw;
+    margin: 0 0;
+    float: left;
+}
+
+.filters ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.filters ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px 20px 10px 0;
+}
+
+.filters ul li a {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--light-purple);
+}
+
+.filters ul li a:hover, .filters ul li a:active {
+    color: #54a4db;
+}
+
+.cards_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.card {
+    width: calc((79.8vw - 49.566px) / 3);
+    min-width: 190px;
+    height: calc(0.6666*(26.6vw - 16.522px) + 44.987px);
+    margin: 0 1% 2%;
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (min-width: 651px) and (max-width: 749px) {
+    .card {
+        width: calc(39.9vw - 18.783px);
+        height: calc(0.6666*(39.9vw - 18.783px) + 44.987px);
+    }
+}
+
+@media (max-width: 650px) {
+    .card {
+        height: calc(0.6666*(84vw - 12.28px) + 44.987px);
+    }
+}
+
+.card:hover {
+    border: 1px solid #363636;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+.card h3 {
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    color: var(--light-purple);
+}
+
+.date {
+    font-size: 1em;
+    text-align: right;
+}
+
+.portfolio-modal {
+    position: fixed;
+    z-index: 10;
+    top: 2em;
+    bottom: 0;
+    left: 12em;
+    right: 12em;
+    background: white;
+    box-shadow: 0px 0px 30px 2em rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: overlay;
+    cursor: default;
+    display: none;
+}
+
+.portfolio-modal.is-open {
+    display: block;
+}
+
+.portfolio-header:nth-of-type(1) {
+    background-image: url(./resources/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-title-box {
+    background: rgba(#54a4db, 0.75);
+    padding: 3em 0 3em 3em;
+    color: white;
+    width: 70%;
+}
+
+.portfolio-title {
+    font-size: 3em;
+    white-space: normal;
+    overflow: auto;
+}
+
+.portfolio-subtitle {
+    font-size: 2em;
+    white-space: normal;
+    overflow: auto;
+}
+
+.portfolio-content {
+    text-align: left;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    white-space: normal;
+    overflow: auto;
+}
+
+.text-box:first-child {
+    margin-top: 1em;
+}
+
+.portfolio-full-width {
+    width: 100%;
+    max-width: initial;
+    object-fit: cover;
+}
+
+.multiple-pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal-close {
+    background: transparent;
+    position: fixed;
+    cursor: pointer;
+    left: calc(14.5em + 0.375vw);
+    top: calc(3em + 0.375vw);
+    border: 0;
+    scale: 80%;
+}
+
+.close-svg {
+    width: 3vw;
+    height: auto;
+    max-width: 2em;
+    min-width: 1.5em;
+}
+
+.portfolio-link {
+    z-index: 10;
+}
