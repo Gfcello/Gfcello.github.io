@@ -19,49 +19,51 @@
     <meta name="description" content="A University of Waterloo Mechatronics Engineering Alumni passionate about developing mobile robots.">
 </head>
 
-<div class="sidenav">
+<!-- <div class="sidenav">
     <button onclick = "window.location.href='#top';">Top</button>
     <button onclick = "window.location.href='#Robotics';">Full Robots</button>
     <button onclick = "window.location.href='#CAD';">Mechanical Projects</button>
     <button onclick = "window.location.href='#Software';">Software & Controls Projects</button>
-</div>
+</div> -->
 
 <body class="main">
-    <div>
-        <h1>Portfolio</h1>
-    </div>
-
-    <div class="banner"></div>
 
     <div class="navbar">
         <a href='./index.html'>Home</a>
         <a href='./resume.html'>Resume</a>
-        <div class="dropdown">
-            <button onclick = "window.location.href='./portfolio.html'", class="dropbtn">Portfolio
-                    <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                    <a href="./portfolio.html#Robotics">Full Robots</a>
-                    <a href="./portfolio.html#CAD">Mechanical Projects</a>
-                    <a href="./portfolio.html#Software">Software & Controls Projects</a>
-            </div>
-        </div> 
+        <a href='./portfolio.html' style="text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 3px;">Work</a>
     </div>
 
     <header class="filter_header">
         <div class="filters">
             <ul>
                 <li>
-                    <a data-filter=".all" href="#">All</a>
+                    <p>Filters:</p>
                 </li>
                 <li>
-                    <a data-filter=".mech" href="#">Mechanical</a>
+                    <div class="border">
+                        <a data-filter=".all" id="all-filter" href="./portfolio.html#all">All</a>
+                    </div>
                 </li>
                 <li>
-                    <a data-filter=".firmware" href="#">Software and Controls</a>
+                    <div class="border">
+                        <a data-filter=".firmware" id="sw-filter" href="./portfolio.html#firmware">Software and Controls</a>
+                    </div>
                 </li>
                 <li>
-                    <a data-filter=".electrical" href="#">Electrical</a>
+                    <div class="border">
+                        <a data-filter=".mechanical" id="mech-filter" href="./portfolio.html#mechanical">Mechanical</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="border">
+                        <a data-filter=".electrical" id="elec-filter" href="./portfolio.html#electrical">Electrical</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="border">
+                        <a data-filter=".job" id="job-filter" href="./portfolio.html#job">Work 💼</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -70,107 +72,475 @@
 
     <div class="cards_container">
         <!-- CARD -1-->
-        <figure style="cursor: pointer;" class="card mech hardware software all">
-            <a class="portfolio-link">
-                <img src="./resources/SnakeWideShotV1.png" width=100% height=auto>
+        <figure class="card mechanical firmware electrical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/SnakeWideShotV1.png" class="card-img" width=100% height=auto>
+                </div>
                 <figcaption>
                     <h3>Snake Robot</h3>
                 </figcaption>
-                <!--Modal-->
-                <div class="portfolio-modal">
-                    <button type="button" class="modal-close">
-                        <img class="close-svg" src="./resources/close button.svg" alt="Close">
-                    </button>
-                    <div class="portfolio-header">
-                        <div class="portfolio-title-box">
-                            <h2 class="portfolio-title">Snake Robot</h2>
-                            <p class="portfolio-subtitle">A snake robot for kinematics, controls, and organic motion study</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <br>
-                        <div class="image-box">
-                            <img class="portfolio-full-width" src="./resources/SnakeGears.png">
-                        </div>
-                        <div class="text-box">
-                            <p>My second term of junior year had what was probably my favorite course thus far, MTE 380. Why is that? Because of how open ended and challenging it was. I’ve written about this before on my blog - but I think courses should strive to be more like this one. The rundown of the syllabus was teams of 3 - 6 will compete to complete a robotics challenge that will be announced in the second week. Your mark of the course is highly dependent on your competition score, which is calculated as:</p>
-                        </div>
-                        <div class="image-box">
-                            <img class="center-picture twenty-five-per" src="./assets/TB_perf_score.png">
-                        </div>
-                        <div class="text-box">
-                            <b>The Challenge</b>
-                        </div>
-                        <div class="text-box">
-                            <p>Essentially the field is two 8ft x 8ft areas separated by a 3ft tall wall. The goal is to start on one side, and navigate towards a red pole on the other side of the field, requiring some method of crossing the wall. Part of the wall is made out of steel sheet metal, encouraging some sort of magnetic solution. Another part of the wall has a ramp up and down. It's worth noting that controlled flight is not allowed, and that you are allowed to leave behind parts as you go.</p>
-                        </div>
-                        <div class="image-box">
-                            <img class="center-picture sixty-per" src="./assets/TB_field_dimensioned.png">
-                        </div>
-                        <div class="text-box">
-                            <p>
-                                Off the bat, our team noticed that it’s obvious that the priority of optimization should be:<br>
-                                1. Reduce time to complete<br>
-                                2. Reduce mass<br>And that there is a tradeoff in score you can calculate between the two, since they are related by square law. For example, if some upgrade doubles the mass, but saves ⅓ of the time to complete the course this is justified because:
-                            </p>
-                        </div>
-                        <div class="image-box">
-                            <img class="center-picture forty-per" src="./assets/TB_tradeoff.png">
-                        </div>
-                    </div>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Electrical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </a>
         </figure>
 
         <!-- CARD -2-->
-        <figure style="cursor: pointer;" class="card mech hardware software all">
-            <a class="portfolio-link">
-                <img src="./assets/TB_cover_320p.png" width=100% height=auto>
+        <figure class="card mechanical firmware electrical all">
+            <a class="portfolio-link" href="./project_pages/oscar.html">
+                <div class="card-img-container">
+                    <img src="./resources/oscar.png" class="card-img" width=100% height=auto>
+                </div>
                 <figcaption>
-                    <h3>Throw Bot</h3>
+                    <h3>OSCAR Marine Rescue Vehicle</h3>
                 </figcaption>
-                <!--Modal-->
-                <div class="portfolio-modal">
-                    <button type="button" class="modal-close">
-                        <img class="close-svg" src="./assets/close button.svg" alt="Close">
-                    </button>
-                    <div class="portfolio-header">
-                        <div class="portfolio-title-box">
-                            <h2 class="portfolio-title">Throw Bot</h2>
-                            <p class="portfolio-subtitle">A hyper optimized robot built to win</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <br>
-                        <div class="image-box">
-                            <img class="portfolio-full-width" src="./assets/TB_side_render.png">
-                        </div>
-                        <div class="text-box">
-                            <p>My second term of junior year had what was probably my favorite course thus far, MTE 380. Why is that? Because of how open ended and challenging it was. I’ve written about this before on my blog - but I think courses should strive to be more like this one. The rundown of the syllabus was teams of 3 - 6 will compete to complete a robotics challenge that will be announced in the second week. Your mark of the course is highly dependent on your competition score, which is calculated as:</p>
-                        </div>
-                        <div class="image-box">
-                            <img class="center-picture twenty-five-per" src="./assets/TB_perf_score.png">
-                        </div>
-                        <div class="text-box">
-                            <b>The Challenge</b>
-                        </div>
-                        <div class="text-box">
-                            <p>Essentially the field is two 8ft x 8ft areas separated by a 3ft tall wall. The goal is to start on one side, and navigate towards a red pole on the other side of the field, requiring some method of crossing the wall. Part of the wall is made out of steel sheet metal, encouraging some sort of magnetic solution. Another part of the wall has a ramp up and down. It's worth noting that controlled flight is not allowed, and that you are allowed to leave behind parts as you go.</p>
-                        </div>
-                        <div class="image-box">
-                            <img class="center-picture sixty-per" src="./assets/TB_field_dimensioned.png">
-                        </div>
-                        <div class="text-box">
-                            <p>
-                                Off the bat, our team noticed that it’s obvious that the priority of optimization should be:<br>
-                                1. Reduce time to complete<br>
-                                2. Reduce mass<br>And that there is a tradeoff in score you can calculate between the two, since they are related by square law. For example, if some upgrade doubles the mass, but saves ⅓ of the time to complete the course this is justified because:
-                            </p>
-                        </div>
-                        <div class="image-box">
-                            <img class="center-picture forty-per" src="./assets/TB_tradeoff.png">
-                        </div>
-                    </div>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Electrical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -3-->
+        <figure class="card mechanical firmware electrical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/SLAM robot" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Lidar SLAM Robot</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Electrical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -4-->
+        <figure class="card mechanical firmware electrical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/GyroV1.png" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Flywheel Gyroscopic Robot</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Electrical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -5-->
+        <figure class="card mechanical firmware all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/UnicycleModelIso.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Unicycle Balance Robot</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -6-->
+        <figure class="card mechanical firmware electrical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/WallBotV2.png" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Magnetic Wall-climbing Robot</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Electrical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -7-->
+        <figure class="card mechanical firmware all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/LarryV3.png" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Hexapod Walking Robot</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -8-->
+        <figure class="card mechanical firmware electrical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/LaserGimbal.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Laser Pointer Gimbal</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Electrical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -9-->
+        <figure class="card mechanical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/2unify-arms.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Robot Arm DFM and End Effectors</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -10-->
+        <figure class="card mechanical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/EngPin.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Uwaterloo Engineering Pin</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -11-->
+        <figure class="card mechanical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/WalletReal.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Lever Wallet</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -12-->
+        <figure class="card mechanical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/GripperAssembled.png" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Flexing Motorized Gripper</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -13-->
+        <figure class="card mechanical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/PIPFestoReal.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Print-In-Place Adaptive Gripper</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -14-->
+        <figure class="card firmware job all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/SkygaugeContact.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Payload Control RTOS System</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Work 💼
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- CARD -15-->
+        <figure class="card firmware all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/CarcassoneInterface.png" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Carcassonne Game Desktop App</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+        </figure>
+
+        <!-- Add more cards here -->
+
+        <figure class="card mechanical all">
+            <a class="portfolio-link" href="./project_pages/snake_bot.html">
+                <div class="card-img-container">
+                    <img src="./resources/OrnamentModel.png" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Miscellaneous Designs and Prints</h3>
+                </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </a>
         </figure>
@@ -181,9 +551,22 @@
                 <figcaption>
                     <h3>This Website</h3>
                 </figcaption>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </a>
         </figure>
     </div>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -205,7 +588,97 @@
             return false
         });
     </script>
-    <script src="./portfolio_filtering.js"></script>
+    <script type="text/javascript">
+        $("portfolio.html").ready(function()
+        {
+            if (window.location.hash == '#all') {
+                var selector = ".all"
+                document.getElementById('all-filter').style.backgroundColor="white";
+                document.getElementById('sw-filter').style.backgroundColor="#323639";
+                document.getElementById('mech-filter').style.backgroundColor="#323639";
+                document.getElementById('elec-filter').style.backgroundColor="#323639";
+                document.getElementById('job-filter').style.backgroundColor="#323639";
+            } else if (window.location.hash == '#firmware') {
+                var selector = ".firmware"
+                document.getElementById('all-filter').style.backgroundColor="#323639";
+                document.getElementById('sw-filter').style.backgroundColor="white";
+                document.getElementById('mech-filter').style.backgroundColor="#323639";
+                document.getElementById('elec-filter').style.backgroundColor="#323639";
+                document.getElementById('job-filter').style.backgroundColor="#323639";
+            } else if (window.location.hash == '#mechanical') {
+                var selector = ".mechanical"
+                document.getElementById('all-filter').style.backgroundColor="#323639";
+                document.getElementById('sw-filter').style.backgroundColor="#323639";
+                document.getElementById('mech-filter').style.backgroundColor="white";
+                document.getElementById('elec-filter').style.backgroundColor="#323639";
+                document.getElementById('job-filter').style.backgroundColor="#323639";
+            } else if (window.location.hash == '#electrical') {
+                var selector = ".electrical"
+                document.getElementById('all-filter').style.backgroundColor="#323639";
+                document.getElementById('sw-filter').style.backgroundColor="#323639";
+                document.getElementById('mech-filter').style.backgroundColor="#323639";
+                document.getElementById('elec-filter').style.backgroundColor="white";
+                document.getElementById('job-filter').style.backgroundColor="#323639";
+            } else if (window.location.hash == '#job') {
+                var selector = ".job"
+                document.getElementById('all-filter').style.backgroundColor="#323639";
+                document.getElementById('sw-filter').style.backgroundColor="#323639";
+                document.getElementById('mech-filter').style.backgroundColor="#323639";
+                document.getElementById('elec-filter').style.backgroundColor="#323639";
+                document.getElementById('job-filter').style.backgroundColor="white";
+            }
+
+            $(".cards_container").isotope({
+                filter: selector
+            });
+        });
+
+        $(".filters ul li a").click(function() {
+            $(".filters ul li a").removeClass("active");
+            $(this).addClass("active");
+
+            var selector = $(this).attr("data-filter")
+
+            $(".cards_container").isotope({
+                filter: selector
+            });
+
+            if (selector == '.all') {
+                document.getElementById('all-filter').style.backgroundColor="white";
+                document.getElementById('sw-filter').style.backgroundColor="#323639";
+                document.getElementById('mech-filter').style.backgroundColor="#323639";
+                document.getElementById('elec-filter').style.backgroundColor="#323639";
+                document.getElementById('job-filter').style.backgroundColor="#323639";
+            } else if (selector == ".firmware") {
+                document.getElementById('all-filter').style.backgroundColor="#323639";
+                document.getElementById('sw-filter').style.backgroundColor="white";
+                document.getElementById('mech-filter').style.backgroundColor="#323639";
+                document.getElementById('elec-filter').style.backgroundColor="#323639";
+                document.getElementById('job-filter').style.backgroundColor="#323639";
+            } else if (selector == ".mechanical") {
+                document.getElementById('all-filter').style.backgroundColor="#323639";
+                document.getElementById('sw-filter').style.backgroundColor="#323639";
+                document.getElementById('mech-filter').style.backgroundColor="white";
+                document.getElementById('elec-filter').style.backgroundColor="#323639";
+                document.getElementById('job-filter').style.backgroundColor="#323639";
+            } else if (selector == ".electrical") {
+                document.getElementById('all-filter').style.backgroundColor="#323639";
+                document.getElementById('sw-filter').style.backgroundColor="#323639";
+                document.getElementById('mech-filter').style.backgroundColor="#323639";
+                document.getElementById('elec-filter').style.backgroundColor="white";
+                document.getElementById('job-filter').style.backgroundColor="#323639";
+            } else if (selector == ".job") {
+                document.getElementById('all-filter').style.backgroundColor="#323639";
+                document.getElementById('sw-filter').style.backgroundColor="#323639";
+                document.getElementById('mech-filter').style.backgroundColor="#323639";
+                document.getElementById('elec-filter').style.backgroundColor="#323639";
+                document.getElementById('job-filter').style.backgroundColor="white";
+            }
+
+            return false
+        });
+    </script>
+    <!-- <script src="./js/portfolio_filtering.js"></script> -->
 </body>
 
 
@@ -234,7 +707,7 @@
 
 
 
-    <h3 id="Robotics">Full Robots</h3>
+    <!-- <h3 id="Robotics">Full Robots</h3>
 
     <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">Articulated Snake Robot</button>
@@ -305,7 +778,7 @@
         </div>
     </div>
 
-    <!-- <div class="project">
+    <div class="project">
         <button type="button" data-toggle="collapse" class="project_title">CNC Maze Solver</button>
         
         <div class="description-area">
@@ -314,7 +787,7 @@
                 <embed type="image/jpg" src="resources/CNCMazeSolver.jpg">
             </div>
         </div>
-    </div> -->
+    </div>
 
 
 
@@ -448,8 +921,8 @@
                 <p>But I am not a web developer, and have no desire to be one. 😀</p>
             </div>
         </div>
-    </div>
+    </div> -->
     
-    <script src="collapsible_project_script.js"></script>
+    <script src="./js/collapsible_project_script.js"></script>
 </body>
 </html>

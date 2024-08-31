@@ -3,34 +3,15 @@
 <head>
     <title>Gordon Fountain's Home</title>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- <script>
-        function clickCounter() {
-          if (typeof(Storage) !== "undefined") {
-            if (localStorage.clickcount) {
-              localStorage.clickcount = Number(localStorage.clickcount)+1;
-            } else {
-              localStorage.clickcount = 1;
-            }
-            document.getElementById("result").innerHTML = "You've clicked this button " + localStorage.clickcount + " time(s).";
-          } else {
-            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-          }
-        }
-    </script> -->
 </head>
 
 <body>
-    <div>
-        <h1>Homepage</h1>
-    </div>
-
-    <div class="banner"></div>
 
     <div class="navbar">
-        <a href='./index.html'>Home</a>
+        <a href='./index.html' style="text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 3px;">Home</a>
         <a href='./resume.html'>Resume</a>
-        <div class="dropdown">
+        <a href='./portfolio.html'>Work</a>
+        <!-- <div class="dropdown">
             <button onclick = "window.location.href='./portfolio.html'", class="dropbtn">Portfolio
                     <i class="fa fa-caret-down"></i>
             </button>
@@ -39,28 +20,37 @@
                     <a href="./portfolio.html#CAD">CAD</a>
                     <a href="./portfolio.html#Software">Software</a>
             </div>
-        </div> 
+        </div>  -->
     </div>
 
-    <h2>Welcome to my homepage.</h2>
-
-    <div style="width: 100%; overflow: hidden;">
+    <div style="width: 70%; overflow: hidden; padding-left: 15%;">
       <div style="width: 45%; float: left;">
-        <p class="frontpage-text">
-          Description and words and things here!
+        <h2 class="frontpage-large-text">Welcome to my collection of robots!</h2>
+        <p class="frontpage-subtitle">
+          (and other work)
         </p>
       </div>
       <div style="margin-left: 50%;"> 
-        <embed type="image/png" src="resources/SnakeWideShotV1.png">
+        <embed type="image/png" style="width: fit;" src="resources/SnakeWideShotV1.png">
       </div>
     </div>
 
-    <p class="frontpage-text">
-      Hi, I'm Gordon Fountain and this site is a mix of portfolio and a place to play around with making a website.
-      <a href="./portfolio.html#Robotics">Snake Robot</a>
-    </p>
-    <!-- <p><button onclick="clickCounter()" type="button" class="clicker">For clicking use only.</button></p> -->
-    <!-- <div id="result"></div> -->
+    <div class="frontpage-body">
+      <p class="frontpage-text">
+        Hi, I'm Gordon, and I make a lot of robots. Earlier this year I worked on a <a class="frontpage-link" href="./project_pages/oscar.html">marine rescue robot</a>
+        that uses GPS and a waterproofed thermal camera to locate overboard victims in open water, navigate to them, provide flotation, and guide rescue efforts to them.
+        I am also working on a <a class="frontpage-link" href="./project_pages/snake_bot.html">snake robot</a> etc more
+      </p>
+      <p class="frontpage-text">
+        While my specialty is <a class="frontpage-link" href="./portfolio.html#firmware">firmware and controls</a>,
+        I'm an obsessive generalist who does everything from <a class="frontpage-link" href="./portfolio.html#mechanical">mechanical design</a> to
+        <a class="frontpage-link" href="./portfolio.html#electrical">electrical</a>. Check out all of my <a class="frontpage-link" href="./portfolio.html#all">work</a>!
+      </p>
+      <p class="frontpage-text">
+        I recently graduated from Mechatronics Engineering at the University of Waterloo. I've <a class="frontpage-link" href="./work.html">worked</a>
+        at places like Impossible Metals, Kindred (Ocado), and Skygauge Robotics.
+      </p>
+    </div>
 </body>
 
 </html>

@@ -1,34 +1,40 @@
 :root {
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
-    --dark-grey: rgb(50, 54, 57);
+    --pdf-grey: rgb(50, 54, 57);
+    --dark-grey: rgb(40, 45, 45);
     --grey: rgb(70, 74, 77);
     --light-purple: rgb(207, 160, 215);
     --dark-purple: rgb(110, 0, 140);
 }
 
+@font-face {
+    font-family: "dos";
+    src: url(./resources/ModernDOS9x16.ttf);
+}
+
+
 body {
     font-family: monospace;
-    background-color: var(--dark-grey);
+    background-color: var(--pdf-grey);
     text-align: left;
     color: var(--white);
 }
 
-.page_title {
+/* .page_title {
     height: fit-content;
 }
 
 .banner {
-    background-color: var(--dark-purple);
     height: 10px;
-}
+} */
 
 .navbar {
     overflow: hidden;
-    background-color: var(--black);
-    border-width: 3px;
-    border-color: var(--dark-purple);
-    border-style: solid;
+    /* position: fixed;
+    width: 100%; */
+    background-color: var(--dark-grey);
+    font-family:'dos', Courier, monospace;
   }
 
 .navbar a {
@@ -40,7 +46,7 @@ body {
     text-decoration: none;
 }
 
-.dropdown {
+/* .dropdown {
     float: left;
     overflow: hidden;
     background-color: var(--grey);
@@ -55,13 +61,13 @@ body {
     background-color: var(--black);
     font-family: inherit;
     margin: 0;
-}
+} */
 
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: var(--grey);
 }
 
-.dropdown-content {
+/* .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--grey);
@@ -83,12 +89,12 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: var(--dark-grey);
+    background-color: var(--pdf-grey);
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 nav {
     width: max-content;
@@ -96,7 +102,7 @@ nav {
 }
 
 nav button:hover {
-    background-color: var(--dark-grey);
+    background-color: var(--pdf-grey);
 }
 
 button {
@@ -136,30 +142,30 @@ a {
 }
 
 .sidenav button:hover {
-    background-color: var(--dark-grey);
+    background-color: var(--pdf-grey);
 }
 
 h1 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'dos', Courier, monospace;
     background-color: var(--black);
     text-align: center;
     color: var(--white);
     margin-bottom: 0px;
     margin-top: 0px;
     padding: 20px;
-    border-width: 3px;
-    border-color: var(--dark-purple);
     border-style: solid;
+    letter-spacing: 1px;
+    font-size: 40px;
 }
 
 h2 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'dos', Courier, monospace;
     font-size: 30px;
     color: var(--white);
 }
 
 h3 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'dos', Courier, monospace;
     font-size: 30px;
     color: var(--white);
 }
@@ -168,9 +174,38 @@ p {
     font-family: monospace;
 }
 
+.frontpage-subtitle{
+    font-size: 20px;
+    color: var(--light-purple);
+    font-family: monospace;
+}
+
+.frontpage-large-text{
+    font-size: 40px;
+    color: var(--light-purple);
+    font-family: 'dos', Courier, monospace;
+}
+
+.frontpage-body{
+    width: 70%;
+    padding-left: 15%;
+    text-align: center;
+}
+
 .frontpage-text{
     font-size: 20px;
+    color: var(--white);
+    font-family: monospace;
 }
+
+.frontpage-link{
+    font-size: 20px;
+    color: var(--light-purple);
+    font-family: monospace;
+    font-style: italic;
+}
+
+
 
 /* .clicker {
     background-color: var(--dark-purple);
@@ -210,7 +245,7 @@ p {
     border-width: 3px;
     border-color: var(--dark-purple);
     border-style: solid;
-    background-color: var(--dark-grey);
+    background-color: var(--pdf-grey);
 }
 
 .description-area {
@@ -223,7 +258,7 @@ p {
 .description {
     margin: auto;
     width: 100%;
-    background-color: var(--dark-grey);
+    background-color: var(--pdf-grey);
     text-align:center;
 }
 
@@ -292,16 +327,32 @@ object {
     margin: 10px 20px 10px 0;
 }
 
+.filters ul li p {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--white);
+}
+
 .filters ul li a {
+    padding-left: 5px;
+    padding-right: 5px;
     text-decoration: none;
     display: inline-block;
     font-weight: bold;
     font-size: 20px;
     color: var(--light-purple);
+    background-color: var(--pdf-grey);
+}
+
+.filters ul li .border {
+    border: 2px solid var(--white);
+    border-radius: 8px;
 }
 
 .filters ul li a:hover, .filters ul li a:active {
-    color: #54a4db;
+    color: var(--white);
 }
 
 .cards_container {
@@ -310,48 +361,89 @@ object {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 15px 0;
+    padding-left: 5%;
 }
 
 .card {
-    width: calc((79.8vw - 49.566px) / 3);
+    width: 20vw;
     min-width: 190px;
-    height: calc(0.6666*(26.6vw - 16.522px) + 44.987px);
+    height: 25.5vw;
     margin: 0 1% 2%;
-    border: 1px solid #e4e4e4;
+    border: 1px solid var(--white);
     border-radius: 8px;
     white-space: nowrap;
     overflow: hidden;
 }
 
-@media (min-width: 651px) and (max-width: 749px) {
-    .card {
-        width: calc(39.9vw - 18.783px);
-        height: calc(0.6666*(39.9vw - 18.783px) + 44.987px);
-    }
-}
-
-@media (max-width: 650px) {
-    .card {
-        height: calc(0.6666*(84vw - 12.28px) + 44.987px);
-    }
-}
-
 .card:hover {
-    border: 1px solid #363636;
+    border: 1px solid var(--black);
+}
+
+.card-img-container {
+    text-align: center;
+}
+
+.card-img {
+    max-height: 250px;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.card-tags {
+    max-width: 100%;
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.card-tags ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    max-width: 100%;
+    width: auto;
+}
+
+.card-tags ul li {
+    display: inline-block;
+    list-style-type: none;
+    max-width: 100%;
+    width: auto;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.card-tags ul li .border {
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    line-height: 1px;
+    
+}
+
+.card-tags ul li .border p {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
 }
 
 figcaption {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
     padding: 5px 15px;
+    position: absolute;
+    top: 255px;
+    text-wrap: wrap;
+    text-align: left;
 }
 
 .card h3 {
     margin-block-start: 3px;
     margin-block-end: 3px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'dos', Courier, monospace;
     font-size: 1.25em;
     line-height: 1.25em;
     color: var(--light-purple);
@@ -452,4 +544,43 @@ figcaption {
 
 .portfolio-link {
     z-index: 10;
+    text-align: center;
 }
+
+/* Project Pages */
+.project-page-container{
+    width: 100%; 
+    overflow: hidden; 
+    text-align: center;
+}
+
+.project-title{
+    font-family:'dos', Courier, monospace;
+    color: var(--light-purple);
+    font-size: 40px;
+}
+
+.project-subtitle{
+    font-size: 20px;
+    color: var(--light-purple);
+    font-family: monospace;
+}
+
+.project-page-body{
+    width: 70%;
+    padding-left: 15%;
+    text-align: center;
+}
+
+.project-page-text{
+    font-size: 20px;
+    color: var(--white);
+    font-family: monospace;
+}
+
+.project-page-png{
+    width: auto;
+}
+
+
+
