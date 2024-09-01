@@ -2,7 +2,7 @@
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
     --pdf-grey: rgb(50, 54, 57);
-    --dark-grey: rgb(40, 45, 45);
+    --dark-grey: #292B2E;
     --grey: rgb(70, 74, 77);
     --light-purple: rgb(207, 160, 215);
     --dark-purple: rgb(110, 0, 140);
@@ -106,7 +106,7 @@ nav button:hover {
 }
 
 button {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 a {
@@ -177,13 +177,14 @@ p {
 .frontpage-subtitle{
     font-size: 20px;
     color: var(--light-purple);
-    font-family: monospace;
+    font-family: 'dos', Courier, monospace;
 }
 
 .frontpage-large-text{
     font-size: 40px;
     color: var(--light-purple);
     font-family: 'dos', Courier, monospace;
+    font-weight: normal;
 }
 
 .frontpage-body{
@@ -576,11 +577,18 @@ figcaption {
     font-size: 20px;
     color: var(--white);
     font-family: monospace;
+    text-align: left;
 }
 
-.project-page-png{
+.project-page-img{
+    height: 300px;
     width: auto;
+    max-width: 100%;
 }
 
-
+.project-page-vid{
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+}
 

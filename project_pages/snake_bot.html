@@ -3,6 +3,9 @@
 <head>
     <title>Gordon Fountain | Snake Robot</title>
     <link rel="stylesheet" href="../styles.css">
+
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -14,7 +17,7 @@
     </div>
 
     <div class="project-page-container">
-        <embed type="image/png" class="project-page-png" src="../resources/SnakeWideShotV1.png">
+        <embed type="image/png" class="project-page-img" src="../resources/SnakeWideShotV1.png">
         
         <h2 class="project-title">Snake Robot</h2>
         <p class="project-subtitle">
@@ -26,15 +29,118 @@
         <p class="project-page-text">
             This project began as an idea to work on forward and inverse kinematics and to explore 
             organic motions in a larger project. I have worked on industrial robotic arms at 
-            Kindred Robotics (now a part of Ocado), but I wanted to create the fully system myself 
-            rather than working with existing arms.
+            Kindred Robotics (now a part of Ocado), but I wanted to create a system from scratch 
+            with more joints and the ability to move and eventually climb.
         </p>
+        <embed type="image/png" class="project-page-img" src="../resources/SnakeHead.png">
         <p class="project-page-text">
             The first version of the snake included 2 wheel systems that I designed a gear system
             for to allow the wheels to turn and drive in any direction with no breaks in driving.
 
             I designed the gear system to ensure that the turning and driving motors stayed
             stationary and the two sets of gears stayed engaged.
+        </p>
+        <embed type="image/png" class="project-page-img" src="../resources/SnakeGears.png">
+        <p class="project-page-text">
+            This section included cutouts for power and motor signal wires, used slots for nuts and
+            holes for M3 screws to connect top and bottom sections. Because the wheel assembly 
+            would be contained in this link the joint motors would be part of the adjacent links.
+        </p>
+        <embed type="image/png" class="project-page-img" src="../resources/SnakeGearsReal.png">
+        <embed type="image/png" class="project-page-img" src="../resources/SnakeGearDriveWheel.jpg">
+        <p class="project-page-text">
+            3D rinting this link showed a few issues with the design. First, the link was larger 
+            that would be reasonable for the servo motors to move. Through some moment math and
+            weighing the section it was clear that the links needed to be smaller and lighter.
+            The second issue was that the driving gear teeth were too thin for a reliable 
+            connection with the wheel.
+        </p>
+        <p class="project-page-text">
+            Around the time of this I lost my school license to SolidWorks, so I decided to
+            redesign the snake using SolidEdge, a similar piece of software that is free for hobby
+            use. I also had come across a 
+            <a class="frontpage-link" href="https://www.youtube.com/watch?v=qCtXsTaEscM">video by computerphile</a>
+            about a snake robot that talked about different methods of locomotion that convinced me
+            to remove the wheels entirely and take on the challenge of a mobile robot without 
+            wheels or legs.
+        </p>
+        <p class="project-page-text">
+            To make my snake robot mobile I needed to power each of the 10 high-torque motors I
+            planned to use in addition to the Respberry Pi Zero and sensors I was using. To make 
+            the snake as light and small as possible I settled on using a 4S LiPo battery in the
+            tail of the robot. I would then design my own chaining buck converter PCB to power
+            the motors and components at a 5V level.
+        </p>
+        <embed type="image/png" class="project-page-img" src="../resources/SnakeBuckDesign.png">
+        <p class="project-page-text">
+            I used the TI Webench Power Designer to design a buck circuit and began to create my
+            power circuit using KiCad. I also decided to use a PCA9685 board to generate the motor
+            control signals as the Raspberry Pi Zero cannot handle 10 hardware PWM signals.
+        </p>
+        <p class="project-page-text">
+            Because all of the PWM signals are originating from one place and then being run along 
+            the length of the snake, electrical interference was a concern, so I added a signal
+            cleaning circuit consisting of a low-pass filter and a Schmitt Trigger to the back of
+            the PCB. I also added pads for bypassing resistors for the back circuit and some bulk
+            electrolytic capacitors to the 5V output to handle current spikes from the servo motors.
+        </p>
+        Schematic image here
+        <p class="project-page-text">
+            With the echematic completed I worked on the layout attempting to maximize the area of
+            the copper to pass through the battery ground and voltage leads as the battery power is
+            chained through the length of the snake and minimizing resistance is key for efficiency.
+        </p>
+        Layout image Here
+        <p class="project-page-text">
+            Once the PCBs arrived I went through the process of using a stencil and solder paste to
+            reflow and add all the components for the power circuit first. 
+            First I used an incorrect temperature to try to reflow a board, but after I corrected 
+            the temperature the reflow went better.
+            
+            I did run into issues with 
+            two of the boards having short circuits under the very tiny buck chip, but taking the 
+            chip off and resoldering it fixed the issue for both boards. I now had boards that
+            were outputting 5V when they recieved 12-16V.
+        </p>
+        <embed type="image/gif" class="project-page-img" src="../resources/SnakePCBPowerCircuitAssembly.gif">
+        <embed type="image/gif" class="project-page-img" src="../resources/SnakePCBBurnt.jpg">
+        <video controls muted class="project-page-vid">
+            <source src="../resources/SnakePowerPCBReflow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="project-page-text">
+            I then populated the signal cleaning circuits on not all of the boards as the board 
+            that powere the Raspberry Pi will not need the back circit.
+        </p>
+        <embed type="image/gif" class="project-page-img" src="../resources/SnakePCBBackCircuitAssembly.gif">
+        <video controls muted class="project-page-vid">
+            <source src="../resources/SnakePCBBackReflow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="project-page-text">
+            Next I populated the through-hold PCB components. I noticed that I had flipped the 
+            signal and 5V outputs to the motors at this point, so I unfortunately couldn't directly
+            plug the servo motors into the boards (if I make more I will fix this). In the mean
+            time I either soldered the regular headers with extra jumper wires or soldered cut 
+            wires directly to allow the motors to plug in. Each motor can draw up to 2.4A of
+            current at the peak, so the wires used were selected as tehy are rated for 6A of peak 
+            current.
+        </p>
+        <embed type="image/gif" class="project-page-img" src="../resources/SnakePCBTHTPopulate.gif">
+        <p class="project-page-text">
+            Now with working PCBs I tested running motors and began assembly of the robot as I 
+            3D printed the second version of the snake which was much slimmer.
+        </p>
+        2 links moving and rolling
+        <p class="project-page-text">
+            With 5 PCB links, 4 servo links, a head, and a tail, the snake is well over a meter 
+            long and so care was taken when managing wires and making the plugs to chain the
+            battery power lines from PCB to PCB. I used XT60 conectors as they could handle more
+            current than I needed and that was a standard for the batteries.
+        </p>
+        Some assembly pics or gif
+        <p class="project-page-text">
+            Currently the snake is in the process of being assembled and printed.
         </p>
 
         <!-- Picture -->
