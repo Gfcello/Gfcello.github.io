@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gordon Fountain | Flywheel Robot</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href='../index.html'>Home</a>
+        <a href='../resume.html'>Resume</a>
+        <a href='../portfolio.html' style="text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 3px;">Work</a>
+    </div>
+
+    <div class="project-page-container">
+        <embed type="image/png" class="project-page-img" src="../resources/GyroV1.png">
+        
+        <h2 class="project-title">Flywheel Gyroscopic Robot</h2>
+        <p class="project-subtitle">
+          A personal project to design a gyroscopic balancing robot
+        </p>
+    </div>
+
+    <div class="project-page-body">
+        <p class="project-page-text">
+            This project began as the unicycle robot that I also have listed in my portfolio. This
+            second iteration is a challenge to create a balancing robot that rests on free spinning
+            wheels. The robot will balance using a flywheel with an acceleration-based pitch 
+            balancing system that I have been designing the controller for. Yaw control will come
+            from the ability to roll the flywheel and use the inertia of the flywheel.
+            Once the robot balances well I may add a propellor to the back so that it can drive and
+            move while still maintaining the non-actuated wheels.
+        </p>
+        <video controls muted class="project-page-vid">
+            <source src="../resources/FlywheelSpin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls muted class="project-page-vid">
+            <source src="../resources/FlywheelTilting.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="project-page-text">
+            The first version of this robot involved a BLDC motor attached to a heavy flywheel made
+            of a wheel acting as the weight and an adaptor to connect it to the motor. A 2S LiPo
+            battery connected to a BEC (Battery Elimination Circuit) was used to power the 
+            controlling microcontroller and IMU, in addition to an ESC that powered the BLDC motor.
+        </p>
+        <embed type="image/gif" class="project-page-img" src="../resources/FlywheelV1Assembly.gif">
+        <p class="project-page-text">
+            The first spin test failed rather quickly when the plastic adaptor piece to connect the
+            wheel to the BLDC motor ripped apart at high speeds.
+        </p>
+        <video controls muted class="project-page-vid">
+            <source src="../resources/SlowFlywheelPopFreezeframe.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="project-page-text">
+            I then redesigned the flywheel to be a metal washer with a stronger 3D printed adaptor
+            that survived the spin test (now performed in a brick enclosure). Unfortunately the
+            test revealed that the inertia of the flywheel was causing issues with the ESC leading 
+            to a loss of speed control and the BLDC motor was far too powerful for the use case.
+        </p>
+        <p class="project-page-text">
+            The next step for this project will be to use a lower-speed likely brushed DC motor for
+            the flywheel and possibly use a PCB that I designed for my <a class="frontpage-link" href="./project_pages/snake_bot.html">snake robot</a>
+            to power the robot.
+        </p>
+    </div>
+</body>
+
+</html>
