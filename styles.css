@@ -110,7 +110,7 @@ button {
 }
 
 a {
-    font-weight: bold;
+    font-weight: normal;
     font: monospace;
     color: var(--light-purple);
 }
