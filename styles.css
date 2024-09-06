@@ -4,7 +4,7 @@
     --pdf-grey: rgb(50, 54, 57);
     --dark-grey: #292B2E;
     --grey: rgb(70, 74, 77);
-    --light-purple: rgb(207, 160, 215);
+    --light-purple: #CCB2FF;
     --dark-purple: rgb(110, 0, 140);
 }
 
@@ -19,6 +19,7 @@ body {
     background-color: var(--pdf-grey);
     text-align: left;
     color: var(--white);
+    margin: 0;
 }
 
 /* .page_title {
@@ -30,11 +31,14 @@ body {
 } */
 
 .navbar {
-    overflow: hidden;
-    /* position: fixed;
-    width: 100%; */
+    width: 100%;
     background-color: var(--dark-grey);
     font-family:'dos', Courier, monospace;
+    z-index: 30;
+    height: fit-content;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: fixed;
   }
 
 .navbar a {
@@ -42,8 +46,19 @@ body {
     font-size: 16px;
     color: var(--light-purple);
     text-align: center;
+    font-size: 20px;
     padding: 14px 16px;
     text-decoration: none;
+    z-index: 400;
+}
+
+.gradient-line {
+    background-image: linear-gradient(to right, var(--light-purple) 0%, var(--dark-purple) 100%);
+    width: 100%;
+    height: 4px;
+    z-index: inherit;
+    position: absolute;
+    bottom: 0;
 }
 
 /* .dropdown {
@@ -299,6 +314,7 @@ object {
 }
 
 .resume {
+    padding-top: 55px; /* for the header */
     width: 60%;
     margin-left: 20%;
     height: 1200px;
@@ -309,7 +325,11 @@ object {
     width: 100%;
     display: inline-block;
     padding: 0;
-    padding-left: 2.5%;
+    padding-left: 5%;
+    position: fixed;
+    top: 6%;
+    z-index: 10;
+    /* background-color: var(--pdf-grey); */
 }
 
 .filters {
@@ -338,23 +358,26 @@ object {
 }
 
 .filters ul li a {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 1px;
     text-decoration: none;
     display: inline-block;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 20px;
     color: var(--light-purple);
     background-color: var(--pdf-grey);
 }
 
 .filters ul li .border {
-    border: 2px solid var(--white);
-    border-radius: 8px;
+    border: 1px solid var(--light-purple);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .filters ul li a:hover, .filters ul li a:active {
-    color: var(--white);
+    background-color: var(--grey);
+    font-weight: bold;
 }
 
 .cards_container {
@@ -364,21 +387,44 @@ object {
     flex-wrap: wrap;
     padding: 15px 0;
     padding-left: 5%;
+    padding-top: 8%;
+    z-index: 0;
+    height: auto;
 }
 
 .card {
     width: 20vw;
     min-width: 190px;
-    height: 25.5vw;
+    height: fit-content;
     margin: 0 1% 2%;
-    border: 1px solid var(--white);
-    border-radius: 8px;
+    content: "";
+    border-radius: 30px;
     white-space: nowrap;
     overflow: hidden;
 }
 
 .card:hover {
-    border: 1px solid var(--black);
+    background-color: var(--dark-grey);
+}
+
+.card:hover:before {
+    background: linear-gradient(180deg,var(--light-purple),var(--dark-purple));
+    mask: 
+        linear-gradient(#000 0 0) exclude, 
+        linear-gradient(#000 0 0) content-box;
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 4px; /* the border thickness */
+    border-radius: 30px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--light-purple) 0%, var(--light-purple) 100%);
+    mask: 
+        linear-gradient(#000 0 0) exclude, 
+        linear-gradient(#000 0 0) content-box;
 }
 
 .card-img-container {
@@ -390,13 +436,12 @@ object {
     height: auto;
     max-width: 100%;
     width: auto;
+    z-index: 4;
 }
 
 .card-tags {
     max-width: 100%;
     width: fit-content;
-    position: absolute;
-    bottom: 0;
     padding-bottom: 5px;
     text-align: center;
 }
@@ -422,10 +467,9 @@ object {
 }
 
 .card-tags ul li .border {
-    border: 1px solid var(--white);
+    border: 1px solid var(--light-purple);
     border-radius: 20px;
     line-height: 1px;
-    
 }
 
 .card-tags ul li .border p {
@@ -436,10 +480,10 @@ object {
 
 figcaption {
     padding: 5px 15px;
-    position: absolute;
-    top: 255px;
     text-wrap: wrap;
     text-align: left;
+    text-decoration: none;
+    z-index: 3;
 }
 
 .card h3 {
@@ -448,7 +492,9 @@ figcaption {
     font-family:'dos', Courier, monospace;
     font-size: 1.25em;
     line-height: 1.25em;
-    color: var(--light-purple);
+    color: var(--white);
+    font-weight: normal;
+    text-decoration: none;
 }
 
 .date {
@@ -545,12 +591,13 @@ figcaption {
 }
 
 .portfolio-link {
-    z-index: 10;
+    z-index: 200;
     text-align: center;
 }
 
 /* Project Pages */
 .project-page-container{
+    padding-top: 55px; /* accounting for the nav bar */
     width: 100%; 
     overflow: hidden; 
     text-align: center;
