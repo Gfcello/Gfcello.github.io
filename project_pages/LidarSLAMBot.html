@@ -18,7 +18,7 @@
     </div>
 
     <div class="project-page-container">
-        <embed type="image/png" class="project-page-img" src="../resources/RPLidar.jpg">
+        <embed type="image/png" class="project-page-img" src="../resources/SLAMLidarFirstMap.jpg">
         
         <h2 class="project-title">SLAM Bot</h2>
         <p class="project-subtitle">
@@ -29,10 +29,17 @@
     <div class="project-page-body">
         <p class="project-page-text">
             An ongoing project, I am working on a robot that will map out an office space and 
-            perform localization, navigation, and obstacle avoidance using a Lidar, IMU, and a
+            perform localization, navigation, and obstacle avoidance using a LiDAR, IMU, and a
             computer mouse as a position sensor. This project is for a previous employer to act
             as an office avatar that can allow remotely working employees to see parts of the 
-            office and communicate.
+            office and communicate. Below is the RPLiDAR that I am using for mapping.
+        </p>
+        <embed type="image/png" class="project-page-img" src="../resources/RPLidar.jpg">
+        <p class="project-page-text">
+            Currently I have set up the LiDAR and a few sensors. Using this data, the slam_toolbox, 
+            and nav2 library for ROS2 I can generate a map and send goal coordiantes in RVIZ.
+            Next I will be adding a driving base of some kind and mapping out a larger area as well
+            as using the nav2 library to drive to points on the map as well as avoiding obstacles.
         </p>
         <!-- <embed type="image/png" class="project-page-img" src="../resources/OSCARSectioned.png"> -->
     </div>
