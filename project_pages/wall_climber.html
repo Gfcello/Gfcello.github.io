@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gordon Fountain | Wall-climbing Robot</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href='../index.html'>Home</a>
+        <a href='../resume.html'>Resume</a>
+        <a href='../portfolio.html' style="text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 3px;">Projects</a>
+        <div class="gradient-line"></div>
+    </div>
+
+    <div class="project-page-container">
+        <embed type="image/png" class="project-page-img" src="../resources/WallBotV2.png">
+        
+        <h2 class="project-title">Magnetic Wall-climbing Robot</h2>
+        <p class="project-subtitle">
+          A class provect creating a wall-traversing robot
+        </p>
+    </div>
+
+    <div class="project-page-body">
+        <p class="project-page-text">
+            In an open-ended design course teams of up to 5 students were challenged to create a
+            robot that can get past a 3ft tall wall, detect a post, and drive to it.
+        </p>
+
+        <p class="project-page-text">
+            My team designed a system with a higher-powered robot that has free-spinning magnetic
+            arms that pull the robot into the wall, then higher torque wheels drive the robot up 
+            and over the wall.
+        </p>
+        <embed type="image/png" class="project-page-img" src="../resources/WallBotV1.png">
+        <p class="project-page-text">
+            Once the robot was over the wall a part of the arm would hit the ground and disconnect
+            the magnets from the wall allowing teh robot to drive away. A directional LiDAR was
+            then used to detect larger differences in distances to guide the robot to the pole.
+        </p>
+        <video controls muted class="project-page-vid">
+            <source src="../resources/WallBotDescent.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="project-page-text">
+            The biggest issue the robot had was gaining too much speed and disconnecting the
+            magnets when the robot was moving from the top of the wall to the far side descent.
+            The robot was very reliable for finding the target and multiple full successful runs
+            were completed.
+        </p>
+    </div>
+</body>
+
+</html>
