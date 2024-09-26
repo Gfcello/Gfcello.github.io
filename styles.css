@@ -327,9 +327,10 @@ object {
     padding: 0;
     padding-left: 5%;
     position: fixed;
-    top: 6%;
-    z-index: 10;
-    /* background-color: var(--pdf-grey); */
+    top: 48px; /* Adjusted top value to match the navbar height */
+    z-index: 100;
+    background-color: var(--pdf-grey);
+    margin-top: 0; /* Ensure no margin at the top */
 }
 
 .filters {
@@ -646,5 +647,10 @@ figcaption {
     height: 300px;
     width: auto;
     max-width: 100%;
+}
+
+.small-project-headline{
+    color: var(--light-purple);
+    font-family: monospace;
 }
 

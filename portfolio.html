@@ -56,13 +56,31 @@
                 </li>
                 <li>
                     <div class="border">
-                        <a data-filter=".job" id="job-filter" href="./portfolio.html#job">Work 💼</a>
+                        <a data-filter=".job" id="job-filter" href="./portfolio.html#job">Work &#x1f4bc;</a>
                     </div>
                 </li>
             </ul>
         </div>
     </header>
 
+    <!-- Adaptively change the top margin of the cards container based on header height -->
+    <script>
+        function adjustContentPosition() {
+            // Get the height of the filter header
+            const filterHeader = document.querySelector('.filter_header');
+            const filterHeight = filterHeader.offsetHeight;
+    
+            // Get the main content and adjust the padding-top based on the filter header height
+            const mainContent = document.querySelector('.cards_container');
+            mainContent.style.paddingTop = filterHeight + 60 + 'px';
+        }
+    
+        // Adjust the content position on page load
+        window.addEventListener('load', adjustContentPosition);
+    
+        // Adjust the content position on window resize, in case the text wraps
+        window.addEventListener('resize', adjustContentPosition);
+    </script>
 
     <div class="cards_container">
         <!-- CARD -1-->
@@ -300,6 +318,79 @@
 
         <!-- CARD -7-->
         <a class="portfolio-link" href="./404-page.html">
+            <figure class="card mechanical firmware electrical all">
+                <div class="card-img-container">
+                    <img src="./resources/LaserGimbal.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Laser Pointer Gimbal</h3>
+                </figcaption>
+                <p class="card-description">
+                    A small project to create an autonomous laser gimbal for cat entertainment
+                </p>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Electrical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Software and Controls
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </figure>
+        </a>
+
+        <!-- CARD -8-->
+        <a class="portfolio-link" href="./404-page.html">
+            <figure class="card mechanical job all">
+                <div class="card-img-container">
+                    <img src="./resources/2unify-arms.jpg" class="card-img" width=100% height=auto>
+                </div>
+                <figcaption>
+                    <h3>Robot Arm DFM and End Effectors</h3>
+                </figcaption>
+                <p class="card-description">
+                    A part-time job during a class term where I designed end effectors and worked on robotic arm manufacturability
+                </p>
+                <div class="card-tags">
+                    <ul>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Mechanical
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="border">
+                                <p>
+                                    Work &#x1f4bc;
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </figure>
+        </a>
+
+        <!-- CARD -9-->
+        <a class="portfolio-link" href="./project_pages/smaller_projects.html#LARRY">
             <figure class="card mechanical firmware all">
                 <div class="card-img-container">
                     <img src="./resources/LarryV3.png" class="card-img" width=100% height=auto>
@@ -331,81 +422,8 @@
             </figure>
         </a>
 
-        <!-- CARD -8-->
-        <a class="portfolio-link" href="./404-page.html">
-            <figure class="card mechanical firmware electrical all">
-                <div class="card-img-container">
-                    <img src="./resources/LaserGimbal.jpg" class="card-img" width=100% height=auto>
-                </div>
-                <figcaption>
-                    <h3>Laser Pointer Gimbal</h3>
-                </figcaption>
-                <p class="card-description">
-                    A small project to create an autonomous laser gimabl for cat entertainment
-                </p>
-                <div class="card-tags">
-                    <ul>
-                        <li>
-                            <div class="border">
-                                <p>
-                                    Mechanical
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="border">
-                                <p>
-                                    Electrical
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="border">
-                                <p>
-                                    Software and Controls
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </figure>
-        </a>
-
-        <!-- CARD -9-->
-        <a class="portfolio-link" href="./404-page.html">
-            <figure class="card mechanical job all">
-                <div class="card-img-container">
-                    <img src="./resources/2unify-arms.jpg" class="card-img" width=100% height=auto>
-                </div>
-                <figcaption>
-                    <h3>Robot Arm DFM and End Effectors</h3>
-                </figcaption>
-                <p class="card-description">
-                    A part-time job during a class term where I designed end effectors and worked on robotic arm manufacturability
-                </p>
-                <div class="card-tags">
-                    <ul>
-                        <li>
-                            <div class="border">
-                                <p>
-                                    Mechanical
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="border">
-                                <p>
-                                    Work 💼
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </figure>
-        </a>
-
         <!-- CARD -10-->
-        <a class="portfolio-link" href="./404-page.html">
+        <a class="portfolio-link" href="./project_pages/smaller_projects.html#PIN">
             <figure class="card mechanical all">
                 <div class="card-img-container">
                     <img src="./resources/EngPin.jpg" class="card-img" width=100% height=auto>
@@ -532,7 +550,7 @@
                         <li>
                             <div class="border">
                                 <p>
-                                    Work 💼
+                                    Work &#x1f4bc;
                                 </p>
                             </div>
                         </li>
