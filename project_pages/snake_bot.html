@@ -124,7 +124,7 @@
             plug the servo motors into the boards (if I make more I will fix this). In the mean
             time I either soldered the regular headers with extra jumper wires or soldered cut 
             wires directly to allow the motors to plug in. Each motor can draw up to 2.4A of
-            current at the peak, so the wires used were selected as tehy are rated for 6A of peak 
+            current at the peak, so the wires used were selected as they are rated for 6A of peak 
             current.
         </p>
         <embed type="image/gif" class="project-page-img" src="../resources/SnakePCBTHTPopulate.gif">
@@ -144,11 +144,20 @@
         </p>
         <embed type="image/gif" class="project-page-img" src="../resources/SnakeLinksAssembly.gif">
         <p class="project-page-text">
-            Currently the snake is in the process of being assembled and printed.
+            Currently I am working on an e-fuse circuit after inrush current caused electrical 
+            issues when using a LiPo battery. While I am fixing the inrush current issue I also
+            set up a forward kinematics model for the snake in Python using DH conventions. Using
+            the model I am planning joint angle trajectories for coordinated motions. So far I
+            have motions for lifting the head and a caterpillar motion for forward motion.
         </p>
-
-        <!-- Picture -->
-         <!-- <figcaption></figcaption> -->
+        <video controls muted class="project-page-vid"></video>
+            <source src="../resources/SnakeBotSimHeadLift.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls muted class="project-page-vid"></video>
+            <source src="../resources/SnakeBotSimCaterpillar.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 </body>
 
