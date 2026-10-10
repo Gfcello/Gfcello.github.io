@@ -124,6 +124,69 @@ button {
     font-weight: normal;
 }
 
+.fourierButton {
+    padding: 8px;
+    font-family: 'dos', Courier, monospace;
+    font-size: 18px;
+    color: var(--light-purple);
+    border: 2px solid var(--light-purple); 
+    background-color: var(--pdf-grey, #222); 
+
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.fourierButton:hover {
+    padding: 8px;
+    font-family: 'dos', Courier, monospace;
+    font-size: 18px;
+    color: var(--pdf-grey);
+    border: 2px solid var(--light-purple); 
+    background-color: var(--light-purple, #222); 
+
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#controlsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'dos', Courier, monospace;
+    font-size: 14px;
+    color: var(--light-purple, #fff);
+    margin-top: 10px;
+}
+
+#controlsTable th, 
+#controlsTable td {
+    padding: 8px 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#controlsTable th:first-child, 
+#controlsTable td:first-child {
+    text-align: left;
+}
+
+#controlsTable input[type="range"] {
+    width: 100%;
+    min-width: 80px;
+    max-width: 120px;
+    accent-color: var(--light-purple, #fff);
+}
+
+#controlsTable th {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
 a {
     font-weight: normal;
     font: monospace;
